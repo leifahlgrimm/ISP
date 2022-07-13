@@ -27,6 +27,14 @@
                             <label for="preis">Preis des Produkts in Cent</label>
                             <input name="preis" class="form-control" id="preis">
                         </div>
+                        <div>
+                            <label for="kategorien">Kategorie:</label>
+                            <select name="kategorien" id="kategorien" class="form-select">
+                                <?php foreach($categories as $category):?>
+                                    <option value="<?=$category['id'] ?>"><?= $category['name']?></option>
+                                <?php endforeach;?>
+                            </select>
+                        </div>
                     </div>
                     <div class="card-footer">
                         <button class="btn btn-success">Speichern</button>

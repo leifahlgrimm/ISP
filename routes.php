@@ -199,6 +199,7 @@ if(strpos($route,'/admin/editproduct') !== false){
         header("Location: ".$baseUrl."index.php/account");
         exit();
     }
+    $categories = getAllCategories();
     // Falls POST
     // Bearbeite Produkt und leite an Adminseite weiter
     require __DIR__ .'/actions/editProduct.php';

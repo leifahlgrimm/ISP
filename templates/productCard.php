@@ -8,6 +8,12 @@
             <p>Beschreibung:</p>
             <?= $product['beschreibung']?>
         </div>
+        <?php if($product['kategorie_id']):?>
+        <hr>
+        <div>
+            <?= getCategoryName($product['kategorie_id'])[0]?>
+        </div>
+        <?php endif;?>
         <div class="mt-auto">
             <hr>
             <?= number_format($product['preis']/100, 2, ",", ".")?> €
